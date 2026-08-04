@@ -1,2 +1,2 @@
 # Phantom-Graph
-My graphique editor
+My graphic editor
