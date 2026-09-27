@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Phantom Graph</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 20px;
+
+            background: #0b0e17;
+            color: #e6eaf2;
+            font-family: Arial, sans-serif;
+        }
+
+        .about-container {
+            width: 100%;
+            max-width: 680px;
+            padding: 40px;
+            text-align: center;
+
+            background: #121827;
+            border: 1px solid #273249;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        .logo {
+            display: block;
+            width: 100%;
+            max-width: 340px;
+            height: auto;
+            margin: 0 auto 24px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 2rem;
+            letter-spacing: -0.5px;
+        }
+
+        .tagline {
+            margin: 0 0 28px;
+            color: #8da9e8;
+            font-size: 1rem;
+        }
+
+        .description {
+            margin: 0 auto 28px;
+            max-width: 540px;
+            color: #b4bfd2;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .version {
+            display: inline-block;
+            margin-bottom: 28px;
+            padding: 7px 14px;
+            border: 1px solid #34435e;
+            border-radius: #aab8d0;
+            font-size: 0.85rem;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 11px 18px;
+            border: 1px solid #405477;
+            border-radius: 8px;
+            background: #1b2941;
+            color: #dce7ff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .button:hover {
+            background: #293c5e;
+            border-color: #7195e8;
+        }
+
+        .back-link {
+            color: #8797b5;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #fff;
+        }
+
+        footer {
+            margin-top: 28px;
+            color: #64718a;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 480px) {
+            .about-container {
+                padding: 28px 20px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="about-container">
+        <img src="./assets/ChatGPT Image 27 sept. 2026, 17_05_07.png" alt="Phantom Graph logo" class="logo"/>
+        <h1>Phantom Graph</h1>
+        <p class="tagline">A visual, extensible node-based editor.</p>
+        <p class="about-me">
+            Hi, I'm Mikael, I am a guy who loves programming ! And thats it.
+
+            <br><br>
+
+            Yes I know this screams Chat-GPT generated. Keep in mind that 
+            all of this is <b>experimental</b> and <b>NOT</b> a final project.
+            I will propably redo it myself if I want. But for now it is 
+            (<i>not for long I wish</i>) 95% AI. (I did some stuff myself, I'm not mad).
+        </p>
+        <p class="description">
+            Phantom Graph is an <b>experimental</b> node-based graph editor
+            designed to make visual programming intuitive, flexible,
+            and extensible.
+
+            <br><br>
+
+            Its goal is to provide a visual environment where users
+            can create, connect, and organize nodes, with the
+            possibility of extending the editor with custom systems
+            and behabiors.
+        </p>
+        <span class="version">
+            Version 0.0.0 - Early Development
+        </span>
+        <div class="links">
+            <a class="button" href="https://github.com/mucciacciaromikael-gif/Phantom-Graph" target="_blank" rel="noopener noreferer">GitHub Repo</a>
+        </div>
+        <a class="back-link" href="./index.html">Back to Phantom Graph</a> 
+        <footer>
+            Phantom Graph - Open-Source project
+        </footer>
+    </main>
+</body>
+</html>

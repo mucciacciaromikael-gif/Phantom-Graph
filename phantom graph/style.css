@@ -24,3 +24,29 @@ html, body {
     width: 100%;
     height: 100%;
 }
+
+/* ABOUT LINK */
+.about-link {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    z-index: 1000;
+
+    color: #aab8d0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+
+    padding: 8px;
+    border: 1px solid #34415a;
+    border-radius: 6px;
+    background: rgba(15, 20, 35, 0.85);
+
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.about-link:hover {
+    color: #fff;
+    background: #26334d;
+    border-color: #668cff;
+}
