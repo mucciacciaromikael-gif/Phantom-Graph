@@ -8,24 +8,24 @@ PhantomGraph.Renderer = class
         this.ctx = canvas.getContext('2d');
 
         if (!this.ctx) {
-            throw new Error("Impossible de créer le contexte 2D");
+            throw new Error("Failed to create 2D canvas context");
         }
 
         this.background = new PhantomGraph.BackgroundRenderer(this);
         this.grid = new PhantomGraph.GridRenderer(this);
+        this.connection = new PhantomGraph.ConnectionRenderer(this);
         this.node = new PhantomGraph.NodeRenderer(this);
         this.selectionRenderer = new PhantomGraph.SelectionRenderer(this);
 
-        // Désactive le lissage
+        // disable smoothing
         this.ctx.imageSmoothingEnabled = false;
 
-        // Couleur de fond par défaut
+        // default background color
         this.clearColor = "#1e1e1e";
     }
 
     resize()
     {
-        // Taille réelle du canvas
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
     }
@@ -35,6 +35,14 @@ PhantomGraph.Renderer = class
         this.background.render();
         this.grid.render(camera);
 
+        // Render visible connections behing nodes
+        const connections = scene.getVisibleConnections();
+
+        for (const connection of connections) {
+            this.connection.render(connection, camera);
+        }
+
+        // Render visible scene object
         const objects = scene.getVisibleObject();
 
         for (const object of objects) {
@@ -43,6 +51,7 @@ PhantomGraph.Renderer = class
             }
         }
 
+        // Render selection overlays above scene objects
         this.selectionRenderer.render(scene, camera);
     }
 };

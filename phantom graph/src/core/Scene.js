@@ -5,6 +5,7 @@ PhantomGraph.Scene = class
     constructor()
     {
         this.objects = [];
+        this.connections = [];
     }
 
     add(object)
@@ -19,12 +20,42 @@ PhantomGraph.Scene = class
         if (index !== -1) {
             this.objects.splice(index, 1);
         }
+
+        // remove the connections too
+        this.connections = this.connections.filter(
+            connections =>
+                connections.output.node !== object &&
+                connections.input.node !== object
+        );
+    }
+
+    addConnection(connection)
+    {
+        this.connections.push(connection);
+    }
+
+    removeConnection(connection) 
+    {
+        const index = this.connections.indexOf(connection);
+
+        if (index !== -1) {
+            this.connections.splice(index, 1);
+        }
     }
 
     getVisibleObject()
     {
         return this.objects.filter(
             object => object.visible
+        );
+    }
+
+    getVisibleConnections()
+    {
+        return (this.connections || []).filter(
+            connection =>
+                connection.output.node.visible &&
+                connection.input.node.visible
         );
     }
 

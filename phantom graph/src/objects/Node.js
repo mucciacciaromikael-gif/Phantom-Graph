@@ -19,8 +19,29 @@ PhantomGraph.Node = class extends PhantomGraph.GraphObject
         this.outputs = [];
 
         this.properties = {};
-
         this.style = {};
+    }
+
+    addInput(options = {})
+    {
+        const port = new PhantomGraph.Port(this, {
+            ...options,
+            direction: "input"
+        });
+
+        this.inputs.push(port);
+        return port;
+    }
+
+    addOutput(options = {})
+    {
+        const port = new PhantomGraph.Port(this, {
+            ...options,
+            direction: "output"
+        });
+
+        this.outputs.push(port);
+        return port;
     }
 
     containsPoint(x, y)
