@@ -6,23 +6,26 @@
 
     <title>Phantom Graph</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./phantom graph/style.css">
 </head>
 <body>
     
     <!-- Canvas principal -->
     <canvas id="viewport"></canvas>
 
+    <!-- Math utils -->
+    <script src="./phantom graph/src/core/MathUtils.js"></script>
+
     <!-- Renderers -->
     <script src="./phantom graph/src/renderers/BackgroundRenderer.js"></script>
+    <script src="./phantom graph/src/renderers/ConnectionRenderer.js"></script>
     <script src="./phantom graph/src/renderers/GridRenderer.js"></script>
     <script src="./phantom graph/src/renderers/NodeRenderer.js"></script>
-    <script src="./phantom graph/src/renderers/ConnectionRenderer.js"></script>
     <script src="./phantom graph/src/renderers/SelectionRenderer.js"></script>
 
     <!-- Input -->
-    <script src="./phantom graph/src/input/Mouse.js"></script>
     <script src="./phantom graph/src/input/Keyboard.js"></script>
+    <script src="./phantom graph/src/input/Mouse.js"></script>
     <script src="./phantom graph/src/input/InputManager.js"></script>
 
     <!-- Systems -->
@@ -49,7 +52,7 @@
     <script src="./phantom graph/src/objects/Group.js"></script>
 
     <!-- Main / Entry point-->
-    <script src="./src/main.js"></script>
+    <script src="./phantom graph/src/main.js"></script>
 
 </body>
 </html>
